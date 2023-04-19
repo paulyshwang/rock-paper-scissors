@@ -17,6 +17,27 @@
         }
       }
 
+      function playRound(playerSelection, computerSelection) {
+        let player = playerSelection.toLowerCase();
+        let computer = computerSelection.toLowerCase();
+
+        if (player === computer) {
+          return "TIE";
+        } else if (player === "rock" && computer === "paper") {
+          return "LOSE";
+        } else if (player === "rock" && computer === "scissors") {
+          return "WIN";
+        } else if (player === "paper" && computer === "rock") {
+          return "WIN";
+        } else if (player === "paper" && computer === "scissors") {
+          return "LOSE";
+        } else if (player === "scissors" && computer === "rock") {
+          return "LOSE";
+        } else if (player === "scissors" && computer === "paper") {
+          return "WIN";
+        }
+      }
+
     </script>
   </body>
 </html>
